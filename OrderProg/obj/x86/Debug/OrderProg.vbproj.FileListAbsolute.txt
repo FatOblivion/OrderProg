@@ -1,0 +1,12 @@
+C:\Users\Anonymous\Documents\Visual Studio 2010\Projects\OrderProg\OrderProg\bin\Debug\OrderProg.exe
+C:\Users\Anonymous\Documents\Visual Studio 2010\Projects\OrderProg\OrderProg\bin\Debug\OrderProg.pdb
+C:\Users\Anonymous\Documents\Visual Studio 2010\Projects\OrderProg\OrderProg\bin\Debug\OrderProg.xml
+C:\Users\Anonymous\Documents\Visual Studio 2010\Projects\OrderProg\OrderProg\obj\x86\Debug\OrderProg.frmMain.resources
+C:\Users\Anonymous\Documents\Visual Studio 2010\Projects\OrderProg\OrderProg\obj\x86\Debug\OrderProg.Resources.resources
+C:\Users\Anonymous\Documents\Visual Studio 2010\Projects\OrderProg\OrderProg\obj\x86\Debug\OrderProg.frmOrders.resources
+C:\Users\Anonymous\Documents\Visual Studio 2010\Projects\OrderProg\OrderProg\obj\x86\Debug\OrderProg.vbproj.GenerateResource.Cache
+C:\Users\Anonymous\Documents\Visual Studio 2010\Projects\OrderProg\OrderProg\obj\x86\Debug\OrderProg.exe
+C:\Users\Anonymous\Documents\Visual Studio 2010\Projects\OrderProg\OrderProg\obj\x86\Debug\OrderProg.xml
+C:\Users\Anonymous\Documents\Visual Studio 2010\Projects\OrderProg\OrderProg\obj\x86\Debug\OrderProg.pdb
+C:\Users\Anonymous\Documents\Visual Studio 2010\Projects\OrderProg\OrderProg\obj\x86\Debug\OrderProg.frmCustomers.resources
+C:\Users\Anonymous\Documents\Visual Studio 2010\Projects\OrderProg\OrderProg\obj\x86\Debug\OrderProg.frmProducts.resources
