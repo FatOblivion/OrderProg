@@ -35,6 +35,8 @@ Partial Class frmOrders
         Me.txtQty = New System.Windows.Forms.TextBox()
         Me.txtCustID = New System.Windows.Forms.TextBox()
         Me.txtTotal = New System.Windows.Forms.TextBox()
+        Me.lblDate = New System.Windows.Forms.Label()
+        Me.txtDate = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'btnShow
@@ -146,11 +148,29 @@ Partial Class frmOrders
         Me.txtTotal.Size = New System.Drawing.Size(321, 20)
         Me.txtTotal.TabIndex = 12
         '
+        'lblDate
+        '
+        Me.lblDate.AutoSize = True
+        Me.lblDate.Location = New System.Drawing.Point(12, 147)
+        Me.lblDate.Name = "lblDate"
+        Me.lblDate.Size = New System.Drawing.Size(62, 13)
+        Me.lblDate.TabIndex = 13
+        Me.lblDate.Text = "Order Date:"
+        '
+        'txtDate
+        '
+        Me.txtDate.Location = New System.Drawing.Point(144, 140)
+        Me.txtDate.Name = "txtDate"
+        Me.txtDate.Size = New System.Drawing.Size(321, 20)
+        Me.txtDate.TabIndex = 14
+        '
         'frmOrders
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(484, 271)
+        Me.Controls.Add(Me.txtDate)
+        Me.Controls.Add(Me.lblDate)
         Me.Controls.Add(Me.txtTotal)
         Me.Controls.Add(Me.txtCustID)
         Me.Controls.Add(Me.txtQty)
@@ -183,4 +203,6 @@ Partial Class frmOrders
     Friend WithEvents txtQty As System.Windows.Forms.TextBox
     Friend WithEvents txtCustID As System.Windows.Forms.TextBox
     Friend WithEvents txtTotal As System.Windows.Forms.TextBox
+    Friend WithEvents lblDate As System.Windows.Forms.Label
+    Friend WithEvents txtDate As System.Windows.Forms.TextBox
 End Class
