@@ -37,20 +37,23 @@ Partial Class frmOrders
         Me.txtTotal = New System.Windows.Forms.TextBox()
         Me.lblDate = New System.Windows.Forms.Label()
         Me.txtDate = New System.Windows.Forms.TextBox()
+        Me.lblProdID = New System.Windows.Forms.Label()
+        Me.txtProdID = New System.Windows.Forms.TextBox()
+        Me.chkEdit = New System.Windows.Forms.CheckBox()
         Me.SuspendLayout()
         '
         'btnShow
         '
-        Me.btnShow.Location = New System.Drawing.Point(12, 204)
+        Me.btnShow.Location = New System.Drawing.Point(9, 245)
         Me.btnShow.Name = "btnShow"
         Me.btnShow.Size = New System.Drawing.Size(75, 55)
         Me.btnShow.TabIndex = 0
-        Me.btnShow.Text = "Search by Customer ID"
+        Me.btnShow.Text = "Search by Order ID"
         Me.btnShow.UseVisualStyleBackColor = True
         '
         'btnAdd
         '
-        Me.btnAdd.Location = New System.Drawing.Point(94, 204)
+        Me.btnAdd.Location = New System.Drawing.Point(95, 245)
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Size = New System.Drawing.Size(75, 55)
         Me.btnAdd.TabIndex = 1
@@ -59,7 +62,7 @@ Partial Class frmOrders
         '
         'btnDel
         '
-        Me.btnDel.Location = New System.Drawing.Point(176, 204)
+        Me.btnDel.Location = New System.Drawing.Point(176, 245)
         Me.btnDel.Name = "btnDel"
         Me.btnDel.Size = New System.Drawing.Size(75, 55)
         Me.btnDel.TabIndex = 2
@@ -68,7 +71,7 @@ Partial Class frmOrders
         '
         'btnUpdate
         '
-        Me.btnUpdate.Location = New System.Drawing.Point(258, 204)
+        Me.btnUpdate.Location = New System.Drawing.Point(258, 245)
         Me.btnUpdate.Name = "btnUpdate"
         Me.btnUpdate.Size = New System.Drawing.Size(75, 54)
         Me.btnUpdate.TabIndex = 3
@@ -77,7 +80,7 @@ Partial Class frmOrders
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(339, 204)
+        Me.Button1.Location = New System.Drawing.Point(339, 245)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(126, 54)
         Me.Button1.TabIndex = 4
@@ -114,14 +117,15 @@ Partial Class frmOrders
         'lblTotal
         '
         Me.lblTotal.AutoSize = True
-        Me.lblTotal.Location = New System.Drawing.Point(12, 111)
+        Me.lblTotal.Location = New System.Drawing.Point(12, 181)
         Me.lblTotal.Name = "lblTotal"
-        Me.lblTotal.Size = New System.Drawing.Size(60, 13)
+        Me.lblTotal.Size = New System.Drawing.Size(63, 13)
         Me.lblTotal.TabIndex = 8
-        Me.lblTotal.Text = "Order Total"
+        Me.lblTotal.Text = "Order Total:"
         '
         'txtOrderID
         '
+        Me.txtOrderID.Enabled = False
         Me.txtOrderID.Location = New System.Drawing.Point(144, 10)
         Me.txtOrderID.Name = "txtOrderID"
         Me.txtOrderID.Size = New System.Drawing.Size(321, 20)
@@ -129,6 +133,7 @@ Partial Class frmOrders
         '
         'txtQty
         '
+        Me.txtQty.Enabled = False
         Me.txtQty.Location = New System.Drawing.Point(144, 39)
         Me.txtQty.Name = "txtQty"
         Me.txtQty.Size = New System.Drawing.Size(321, 20)
@@ -136,6 +141,7 @@ Partial Class frmOrders
         '
         'txtCustID
         '
+        Me.txtCustID.Enabled = False
         Me.txtCustID.Location = New System.Drawing.Point(144, 78)
         Me.txtCustID.Name = "txtCustID"
         Me.txtCustID.Size = New System.Drawing.Size(321, 20)
@@ -143,7 +149,8 @@ Partial Class frmOrders
         '
         'txtTotal
         '
-        Me.txtTotal.Location = New System.Drawing.Point(144, 108)
+        Me.txtTotal.Enabled = False
+        Me.txtTotal.Location = New System.Drawing.Point(144, 178)
         Me.txtTotal.Name = "txtTotal"
         Me.txtTotal.Size = New System.Drawing.Size(321, 20)
         Me.txtTotal.TabIndex = 12
@@ -151,7 +158,7 @@ Partial Class frmOrders
         'lblDate
         '
         Me.lblDate.AutoSize = True
-        Me.lblDate.Location = New System.Drawing.Point(12, 147)
+        Me.lblDate.Location = New System.Drawing.Point(12, 115)
         Me.lblDate.Name = "lblDate"
         Me.lblDate.Size = New System.Drawing.Size(62, 13)
         Me.lblDate.TabIndex = 13
@@ -159,16 +166,47 @@ Partial Class frmOrders
         '
         'txtDate
         '
-        Me.txtDate.Location = New System.Drawing.Point(144, 140)
+        Me.txtDate.Enabled = False
+        Me.txtDate.Location = New System.Drawing.Point(144, 112)
         Me.txtDate.Name = "txtDate"
         Me.txtDate.Size = New System.Drawing.Size(321, 20)
         Me.txtDate.TabIndex = 14
+        '
+        'lblProdID
+        '
+        Me.lblProdID.AutoSize = True
+        Me.lblProdID.Location = New System.Drawing.Point(12, 146)
+        Me.lblProdID.Name = "lblProdID"
+        Me.lblProdID.Size = New System.Drawing.Size(72, 13)
+        Me.lblProdID.TabIndex = 15
+        Me.lblProdID.Text = "Product(s) ID:"
+        '
+        'txtProdID
+        '
+        Me.txtProdID.Enabled = False
+        Me.txtProdID.Location = New System.Drawing.Point(144, 143)
+        Me.txtProdID.Name = "txtProdID"
+        Me.txtProdID.Size = New System.Drawing.Size(321, 20)
+        Me.txtProdID.TabIndex = 16
+        '
+        'chkEdit
+        '
+        Me.chkEdit.AutoSize = True
+        Me.chkEdit.Location = New System.Drawing.Point(15, 212)
+        Me.chkEdit.Name = "chkEdit"
+        Me.chkEdit.Size = New System.Drawing.Size(71, 17)
+        Me.chkEdit.TabIndex = 17
+        Me.chkEdit.Text = "Edit fields"
+        Me.chkEdit.UseVisualStyleBackColor = True
         '
         'frmOrders
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(484, 271)
+        Me.ClientSize = New System.Drawing.Size(484, 312)
+        Me.Controls.Add(Me.chkEdit)
+        Me.Controls.Add(Me.txtProdID)
+        Me.Controls.Add(Me.lblProdID)
         Me.Controls.Add(Me.txtDate)
         Me.Controls.Add(Me.lblDate)
         Me.Controls.Add(Me.txtTotal)
@@ -205,4 +243,7 @@ Partial Class frmOrders
     Friend WithEvents txtTotal As System.Windows.Forms.TextBox
     Friend WithEvents lblDate As System.Windows.Forms.Label
     Friend WithEvents txtDate As System.Windows.Forms.TextBox
+    Friend WithEvents lblProdID As System.Windows.Forms.Label
+    Friend WithEvents txtProdID As System.Windows.Forms.TextBox
+    Friend WithEvents chkEdit As System.Windows.Forms.CheckBox
 End Class
