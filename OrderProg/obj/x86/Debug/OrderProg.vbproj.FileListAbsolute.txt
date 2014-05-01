@@ -10,3 +10,4 @@ C:\Users\Anonymous\Documents\Visual Studio 2010\Projects\OrderProg\OrderProg\obj
 C:\Users\Anonymous\Documents\Visual Studio 2010\Projects\OrderProg\OrderProg\obj\x86\Debug\OrderProg.pdb
 C:\Users\Anonymous\Documents\Visual Studio 2010\Projects\OrderProg\OrderProg\obj\x86\Debug\OrderProg.frmCustomers.resources
 C:\Users\Anonymous\Documents\Visual Studio 2010\Projects\OrderProg\OrderProg\obj\x86\Debug\OrderProg.frmProducts.resources
+C:\Users\Anonymous\Documents\Visual Studio 2010\Projects\OrderProg\OrderProg\obj\x86\Debug\OrderProg.frmAddOrder.resources

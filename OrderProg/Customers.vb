@@ -33,6 +33,7 @@ Public Class frmCustomers
         lst1.Items.Add(vbNewLine + "Surname:" + vbTab + MyDataTbl.Rows(MyRowPosition)("Surname"))
         lst1.Items.Add(vbNewLine + "Contact Details:" + vbTab + MyDataTbl.Rows(MyRowPosition)("Contact"))
         lst1.Items.Add(vbCrLf + "Date of birth:" + vbTab + MyDataTbl.Rows(MyRowPosition)("D.O.B").ToString())
+        lst1.Items.Add(vbCrLf + "Order ID:" + vbTab + MyDataTbl.Rows(MyRowPosition)("ID").ToString())
 
 
 
@@ -58,7 +59,7 @@ Public Class frmCustomers
             custID = CInt(input)
         End If
         'Declaring adapter command and build
-        MyDatAdp = New SqlDataAdapter("SELECT * FROM Customers WHERE ID=" & custID, myCon)
+        MyDatAdp = New SqlDataAdapter("SELECT Customers.ID, Customers.[First Name], Customers.Surname, Customers.Contact, Customers.[D.O.B], Orders.ID FROM Customers INNER JOIN Orders ON Orders.CustomerID=Customers.ID WHERE Customers.ID=" & custID, myCon)
         MyCmdBld = New SqlCommandBuilder(MyDatAdp)
         MyDatAdp.Fill(MyDataTbl)
         'Declaring additional variables req.
@@ -68,6 +69,7 @@ Public Class frmCustomers
         Dim strSurname As String
         Dim strContact As String
         Dim dtDOB As Date
+        Dim intOrderID As Integer
 
 
         'Defining the datarow params
@@ -77,6 +79,7 @@ Public Class frmCustomers
         strSurname = MyDataRow("Surname")
         strContact = MyDataRow("Contact")
         dtDOB = MyDataRow("D.O.B")
+        intOrderID = MyDataRow("ID")
 
 
         'Converting all called data to string
@@ -85,7 +88,7 @@ Public Class frmCustomers
         strSurname.ToString()
         strContact.ToString()
         dtDOB.ToString()
-
+        intOrderID.ToString()
 
 
         'Calling procedure to display records

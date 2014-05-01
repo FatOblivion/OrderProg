@@ -1,7 +1,7 @@
 ﻿Imports System.Data.SqlClient
 Public Class frmOrders
     'declaring private variables 
-    Private blnval1 As Boolean
+
     Private strInp As String
 
     Private myCon As New SqlConnection
@@ -28,7 +28,7 @@ Public Class frmOrders
             txtCustID.Clear()
             txtTotal.Clear()
             txtDate.Clear()
-            txtProdID.Clear()
+            MessageBox.Show("Sorry, that record wasnt found.", "Please try again", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
 
             Exit Sub
         End If
@@ -38,7 +38,7 @@ Public Class frmOrders
         txtCustID.Text = MyDataTbl.Rows(MyRowPosition)("CustomerID").ToString
         txtTotal.Text = MyDataTbl.Rows(MyRowPosition)("Total").ToString
         txtDate.Text = MyDataTbl.Rows(MyRowPosition)("Date").ToString
-        txtProdID.Text = MyDataTbl.Rows(MyRowPosition)("ProductID").ToString
+
 
 
     End Sub
@@ -101,65 +101,9 @@ Public Class frmOrders
     End Sub
  
     Private Sub btnAdd_Click(sender As System.Object, e As System.EventArgs) Handles btnAdd.Click
-        Dim intCustID As Integer
-        Dim intOrderID As Integer
-        Dim dblTotal As Double
-        Dim dtDate As Date
-
-        If Not IsNumeric(txtOrderID.Text) Then
-            MessageBox.Show("Please enter valid data", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            txtOrderID.Clear()
-            txtOrderID.Focus()
-            Exit Sub
-        Else
-            intOrderID = CInt(txtOrderID.Text)
-        End If
-        If Not IsNumeric(txtTotal.Text) Then
-            MessageBox.Show("Please enter valid data", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            txtTotal.Clear()
-            txtTotal.Focus()
-            Exit Sub
-        Else
-            dblTotal = CDbl(txtTotal.Text)
-        End If
-        If Not IsDate(txtDate.Text) Then
-            MessageBox.Show("Please enter a valid date", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            txtDate.Clear()
-            txtDate.Focus()
-            Exit Sub
-        Else
-            dtDate = CDate(txtDate.Text)
-        End If
-        If Not IsNumeric(txtCustID.Text) Then
-            MessageBox.Show("Please enter valid data", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            txtCustID.Clear()
-            txtCustID.Focus()
-            Exit Sub
-        Else
-            intCustID = CInt(txtCustID.Text)
-        End If
-        Dim mycmd As SqlClient.SqlCommand = New SqlClient.SqlCommand()
-
-        mycmd.Connection = myCon
-        mycmd.CommandText = "INSERT INTO Order ( ID, CustomerID, Total, Data) SELECT ID, CustomerID, Date, Total, p.id, number, n.nationality FROM table1 p INNER JOIN table2 c ON c.Id = p.Id INNER JOIN table3 n ON n.Id = p.Id"
-
-        Try
-            mycmd.ExecuteNonQuery()
-        Catch ex As System.Data.SqlClient.SqlException
-            MsgBox(ex.Message)
-        End Try
-        MsgBox("Success")
+        Me.Hide()
+        frmAddOrder.Show()
 
     End Sub
 
-
-
-    Private Sub chkEdit_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles chkEdit.CheckedChanged
-        txtCustID.Enabled = True
-        txtDate.Enabled = True
-        txtOrderID.Enabled = True
-        txtProdID.Enabled = True
-        txtQty.Enabled = True
-        txtTotal.Enabled = True
-    End Sub
 End Class
