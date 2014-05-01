@@ -141,7 +141,7 @@ Public Class frmOrders
         Dim mycmd As SqlClient.SqlCommand = New SqlClient.SqlCommand()
 
         mycmd.Connection = myCon
-        mycmd.CommandText = "INSERT INTO Order ( ID, CustomerID, Date, Total)SELECT ID, CustomerID, Date, Total, p.id, number, n.nationality FROM table1 p INNER JOIN table2 c ON c.Id = p.Id INNER JOIN table3 n ON n.Id = p.Id"
+        mycmd.CommandText = "INSERT INTO Order ( ID, CustomerID, Total, Data) SELECT ID, CustomerID, Date, Total, p.id, number, n.nationality FROM table1 p INNER JOIN table2 c ON c.Id = p.Id INNER JOIN table3 n ON n.Id = p.Id"
 
         Try
             mycmd.ExecuteNonQuery()
