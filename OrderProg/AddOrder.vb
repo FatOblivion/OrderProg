@@ -84,25 +84,40 @@ Public Class frmAddOrder
         Else
             dtDate = CDate(DtPicker.Value)
         End If
-        Dim str1 As String
+        Dim query As String = String.Empty
+        query &= "INSERT INTO Orders (ID, CustomerID, Total, Date)"
+        query &= "VALUES (@orderID, @custID, @total, @date);"
+        query &= "INSERT INTO OrderProd(ID, CustomerID,ProductID, Quantity, Price, OrderID)"
+        query &= "VALUES (@orderID, @custID, @prodID, @Quantity, @price, @orderID)"
 
-        str1 = "begin tran; "
-        str1 &= "INSERT INTO Orders VALUES(" & intOrderID & ", " & intCustID & ", " & dblTotal & ", '" & dtDate & "' ); "
-        str1 &= "INSERT INTO OrderProd (" & intOrderID & ", " & intCustID & ", " & intProdId & ", " & intQty & ", " & dblPrice & ", " & intOrderID & "); "
-        str1 &= "commit tran; "
-
-
-        mycmd = New SqlCommand
-        MyCmd.Connection = myCon
-        MyCmd.CommandType = CommandType.Text
-        MyCmd.CommandText = str1
-        Try
-            MyCmd.ExecuteNonQuery()
-            MessageBox.Show("Successfully added!")
-        Catch ex As SqlException
-            MessageBox.Show(ex.ToString, "error", MessageBoxButtons.OK)
-        End Try
-
+        Using myCon
+            Using comm As New SqlCommand()
+                With comm
+                    .Connection = myCon
+                    .CommandType = CommandType.Text
+                    .CommandText = query
+                    .Parameters.AddWithValue("@orderID", intOrderID)
+                    .Parameters.AddWithValue("@custID", intCustID)
+                    .Parameters.AddWithValue("@total", dblTotal)
+                    .Parameters.AddWithValue("@date", dtDate)
+                    .Parameters.AddWithValue("@prodID", intProdId)
+                    .Parameters.AddWithValue("@Quantity", intQty)
+                    .Parameters.AddWithValue("@price", dblPrice)
+                End With
+                Try
+                    comm.ExecuteNonQuery()
+                    MessageBox.Show("Added sucessfully!", "Yay!", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    txtCustomerID.Clear()
+                    txtOrderID.Clear()
+                    txtPrice.Clear()
+                    txtProdID.Clear()
+                    txtQty.Clear()
+                    txtTotal.Clear()
+                Catch ex As SqlException
+                    MessageBox.Show(ex.Message.ToString(), "Error Message")
+                End Try
+            End Using
+        End Using
     End Sub
 
     Private Sub btnClr_Click(sender As System.Object, e As System.EventArgs) Handles btnClr.Click
