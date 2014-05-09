@@ -6,7 +6,77 @@ OrderProg
 </name>
 </assembly>
 <members>
-<member name="P:OrderProg.My.Resources.Resources.ResourceManager">
+<member name="T:OrderProg.MainDataSet2.OrderProdDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:OrderProg.MainDataSet2.OrderProdRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:OrderProg.MainDataSet2.OrderProdRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:OrderProg.MainDataSet2">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:OrderProg.MainDataSet2TableAdapters.OrderProdTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:OrderProg.MainDataSet2TableAdapters.TableAdapterManager.UpdateUpdatedRows(OrderProg.MainDataSet2,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:OrderProg.MainDataSet2TableAdapters.TableAdapterManager.UpdateInsertedRows(OrderProg.MainDataSet2,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:OrderProg.MainDataSet2TableAdapters.TableAdapterManager.UpdateDeletedRows(OrderProg.MainDataSet2,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:OrderProg.MainDataSet2TableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:OrderProg.MainDataSet2TableAdapters.TableAdapterManager.UpdateAll(OrderProg.MainDataSet2)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:OrderProg.MainDataSet2TableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:OrderProg.MainDataSet2TableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:OrderProg.MainDataSet2TableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="P:OrderProg.frmAddOrder.CurrentOrderId">
+	<summary>
+ Gets or sets the current order being edited. Set the current order id to -1 to specify a new order.
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:OrderProg.frmAddOrder.LoadOrder(System.Int32)">
+	<summary>
+ Loads the order data by the given orderId
+ </summary>
+	<param name="orderId"></param>
+	<remarks></remarks>
+</member><member name="T:OrderProg.frmAddOrder">
+	<summary>
+ Allows the creation or editing of Orders and their line items.
+ </summary>
+	<remarks></remarks>
+</member><member name="P:OrderProg.My.Resources.Resources.ResourceManager">
 	<summary>
   Returns the cached ResourceManager instance used by this class.
 </summary>
@@ -18,6 +88,169 @@ OrderProg
 </member><member name="T:OrderProg.My.Resources.Resources">
 	<summary>
   A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="T:OrderProg.MainDataSet1.OrdersDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:OrderProg.MainDataSet1.OrdersRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:OrderProg.MainDataSet1.OrdersRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:OrderProg.MainDataSet1">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:OrderProg.MainDataSet1TableAdapters.OrdersTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:OrderProg.MainDataSet1TableAdapters.TableAdapterManager.UpdateUpdatedRows(OrderProg.MainDataSet1,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:OrderProg.MainDataSet1TableAdapters.TableAdapterManager.UpdateInsertedRows(OrderProg.MainDataSet1,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:OrderProg.MainDataSet1TableAdapters.TableAdapterManager.UpdateDeletedRows(OrderProg.MainDataSet1,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:OrderProg.MainDataSet1TableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:OrderProg.MainDataSet1TableAdapters.TableAdapterManager.UpdateAll(OrderProg.MainDataSet1)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:OrderProg.MainDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:OrderProg.MainDataSet1TableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:OrderProg.MainDataSet1TableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="P:OrderProg.frmCustDetails.SelectedCustID">
+	<summary>
+ Gets or sets the custID or else sends -1(false) no existing cust
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:OrderProg.MainDataSet.ProductsDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:OrderProg.MainDataSet.ProductsRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:OrderProg.MainDataSet.ProductsRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:OrderProg.MainDataSet">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:OrderProg.MainDataSetTableAdapters.ProductsTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:OrderProg.MainDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(OrderProg.MainDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:OrderProg.MainDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(OrderProg.MainDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:OrderProg.MainDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(OrderProg.MainDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:OrderProg.MainDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:OrderProg.MainDataSetTableAdapters.TableAdapterManager.UpdateAll(OrderProg.MainDataSet)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:OrderProg.MainDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:OrderProg.MainDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:OrderProg.MainDataSetTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:OrderProg.MainDataSet3.CustomersDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:OrderProg.MainDataSet3.CustomersRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:OrderProg.MainDataSet3.CustomersRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:OrderProg.MainDataSet3">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:OrderProg.MainDataSet3TableAdapters.CustomersTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:OrderProg.MainDataSet3TableAdapters.TableAdapterManager.UpdateUpdatedRows(OrderProg.MainDataSet3,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:OrderProg.MainDataSet3TableAdapters.TableAdapterManager.UpdateInsertedRows(OrderProg.MainDataSet3,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:OrderProg.MainDataSet3TableAdapters.TableAdapterManager.UpdateDeletedRows(OrderProg.MainDataSet3,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:OrderProg.MainDataSet3TableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:OrderProg.MainDataSet3TableAdapters.TableAdapterManager.UpdateAll(OrderProg.MainDataSet3)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:OrderProg.MainDataSet3TableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:OrderProg.MainDataSet3TableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:OrderProg.MainDataSet3TableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
 </summary>
 </member>
 </members>

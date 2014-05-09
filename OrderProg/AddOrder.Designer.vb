@@ -22,42 +22,42 @@ Partial Class frmAddOrder
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.btnAdd = New System.Windows.Forms.Button()
-        Me.btnBack = New System.Windows.Forms.Button()
+        Me.components = New System.ComponentModel.Container()
         Me.lblOrderID = New System.Windows.Forms.Label()
-        Me.txtOrderID = New System.Windows.Forms.TextBox()
-        Me.txtCustomerID = New System.Windows.Forms.TextBox()
         Me.lblCustID = New System.Windows.Forms.Label()
-        Me.txtProdID = New System.Windows.Forms.TextBox()
-        Me.lblProductID = New System.Windows.Forms.Label()
-        Me.lblQty = New System.Windows.Forms.Label()
-        Me.txtQty = New System.Windows.Forms.TextBox()
         Me.lblTotal = New System.Windows.Forms.Label()
+        Me.lblDate = New System.Windows.Forms.Label()
+        Me.txtID = New System.Windows.Forms.TextBox()
+        Me.OrdersBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.MainDataSet1 = New OrderProg.MainDataSet1()
+        Me.txtCustID = New System.Windows.Forms.TextBox()
+        Me.OrdersBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.txtTotal = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.DtPicker = New System.Windows.Forms.DateTimePicker()
-        Me.lblPrice = New System.Windows.Forms.Label()
-        Me.txtPrice = New System.Windows.Forms.TextBox()
-        Me.btnClr = New System.Windows.Forms.Button()
+        Me.OrdersBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.txtDate = New System.Windows.Forms.TextBox()
+        Me.OrdersBindingSource3 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.OrdersTableAdapter = New OrderProg.MainDataSet1TableAdapters.OrdersTableAdapter()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.OrderProdBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.MainDataSet2 = New OrderProg.MainDataSet2()
+        Me.OrderProdTableAdapter = New OrderProg.MainDataSet2TableAdapters.OrderProdTableAdapter()
+        Me.btnSave = New System.Windows.Forms.Button()
+        Me.btnCancel = New System.Windows.Forms.Button()
+        Me.btnProd = New System.Windows.Forms.Button()
+        Me.btnViewCust = New System.Windows.Forms.Button()
+        Me.OrderIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ProductIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.QuantityDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PriceDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        CType(Me.OrdersBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MainDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.OrdersBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.OrdersBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.OrdersBindingSource3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.OrderProdBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MainDataSet2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'btnAdd
-        '
-        Me.btnAdd.Location = New System.Drawing.Point(12, 195)
-        Me.btnAdd.Name = "btnAdd"
-        Me.btnAdd.Size = New System.Drawing.Size(267, 23)
-        Me.btnAdd.TabIndex = 0
-        Me.btnAdd.Text = "Add order"
-        Me.btnAdd.UseVisualStyleBackColor = True
-        '
-        'btnBack
-        '
-        Me.btnBack.Location = New System.Drawing.Point(12, 224)
-        Me.btnBack.Name = "btnBack"
-        Me.btnBack.Size = New System.Drawing.Size(267, 23)
-        Me.btnBack.TabIndex = 1
-        Me.btnBack.Text = "Back"
-        Me.btnBack.UseVisualStyleBackColor = True
         '
         'lblOrderID
         '
@@ -65,165 +65,246 @@ Partial Class frmAddOrder
         Me.lblOrderID.Location = New System.Drawing.Point(13, 13)
         Me.lblOrderID.Name = "lblOrderID"
         Me.lblOrderID.Size = New System.Drawing.Size(50, 13)
-        Me.lblOrderID.TabIndex = 2
+        Me.lblOrderID.TabIndex = 0
         Me.lblOrderID.Text = "Order ID:"
-        '
-        'txtOrderID
-        '
-        Me.txtOrderID.Location = New System.Drawing.Point(147, 10)
-        Me.txtOrderID.Name = "txtOrderID"
-        Me.txtOrderID.Size = New System.Drawing.Size(133, 20)
-        Me.txtOrderID.TabIndex = 3
-        '
-        'txtCustomerID
-        '
-        Me.txtCustomerID.Location = New System.Drawing.Point(147, 40)
-        Me.txtCustomerID.Name = "txtCustomerID"
-        Me.txtCustomerID.Size = New System.Drawing.Size(133, 20)
-        Me.txtCustomerID.TabIndex = 4
         '
         'lblCustID
         '
         Me.lblCustID.AutoSize = True
-        Me.lblCustID.Location = New System.Drawing.Point(13, 43)
+        Me.lblCustID.Location = New System.Drawing.Point(13, 127)
         Me.lblCustID.Name = "lblCustID"
         Me.lblCustID.Size = New System.Drawing.Size(68, 13)
-        Me.lblCustID.TabIndex = 5
+        Me.lblCustID.TabIndex = 1
         Me.lblCustID.Text = "Customer ID:"
-        '
-        'txtProdID
-        '
-        Me.txtProdID.Location = New System.Drawing.Point(147, 66)
-        Me.txtProdID.Name = "txtProdID"
-        Me.txtProdID.Size = New System.Drawing.Size(133, 20)
-        Me.txtProdID.TabIndex = 6
-        '
-        'lblProductID
-        '
-        Me.lblProductID.AutoSize = True
-        Me.lblProductID.Location = New System.Drawing.Point(13, 69)
-        Me.lblProductID.Name = "lblProductID"
-        Me.lblProductID.Size = New System.Drawing.Size(61, 13)
-        Me.lblProductID.TabIndex = 7
-        Me.lblProductID.Text = "Product ID:"
-        '
-        'lblQty
-        '
-        Me.lblQty.AutoSize = True
-        Me.lblQty.Location = New System.Drawing.Point(13, 94)
-        Me.lblQty.Name = "lblQty"
-        Me.lblQty.Size = New System.Drawing.Size(49, 13)
-        Me.lblQty.TabIndex = 8
-        Me.lblQty.Text = "Quantity:"
-        '
-        'txtQty
-        '
-        Me.txtQty.Location = New System.Drawing.Point(147, 91)
-        Me.txtQty.Name = "txtQty"
-        Me.txtQty.Size = New System.Drawing.Size(132, 20)
-        Me.txtQty.TabIndex = 9
         '
         'lblTotal
         '
         Me.lblTotal.AutoSize = True
-        Me.lblTotal.Location = New System.Drawing.Point(14, 146)
+        Me.lblTotal.Location = New System.Drawing.Point(13, 39)
         Me.lblTotal.Name = "lblTotal"
-        Me.lblTotal.Size = New System.Drawing.Size(63, 13)
-        Me.lblTotal.TabIndex = 10
-        Me.lblTotal.Text = "Order Total:"
+        Me.lblTotal.Size = New System.Drawing.Size(59, 13)
+        Me.lblTotal.TabIndex = 2
+        Me.lblTotal.Text = "Order total:"
+        '
+        'lblDate
+        '
+        Me.lblDate.AutoSize = True
+        Me.lblDate.Location = New System.Drawing.Point(13, 65)
+        Me.lblDate.Name = "lblDate"
+        Me.lblDate.Size = New System.Drawing.Size(33, 13)
+        Me.lblDate.TabIndex = 3
+        Me.lblDate.Text = "Date:"
+        '
+        'txtID
+        '
+        Me.txtID.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.OrdersBindingSource, "ID", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, Nothing, "N0"))
+        Me.txtID.Location = New System.Drawing.Point(89, 10)
+        Me.txtID.Name = "txtID"
+        Me.txtID.Size = New System.Drawing.Size(100, 20)
+        Me.txtID.TabIndex = 4
+        '
+        'OrdersBindingSource
+        '
+        Me.OrdersBindingSource.DataMember = "Orders"
+        Me.OrdersBindingSource.DataSource = Me.MainDataSet1
+        '
+        'MainDataSet1
+        '
+        Me.MainDataSet1.DataSetName = "MainDataSet1"
+        Me.MainDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'txtCustID
+        '
+        Me.txtCustID.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.OrdersBindingSource1, "CustomerID", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, Nothing, "N0"))
+        Me.txtCustID.Location = New System.Drawing.Point(89, 124)
+        Me.txtCustID.Name = "txtCustID"
+        Me.txtCustID.Size = New System.Drawing.Size(100, 20)
+        Me.txtCustID.TabIndex = 5
+        '
+        'OrdersBindingSource1
+        '
+        Me.OrdersBindingSource1.DataMember = "Orders"
+        Me.OrdersBindingSource1.DataSource = Me.MainDataSet1
         '
         'txtTotal
         '
-        Me.txtTotal.Location = New System.Drawing.Point(148, 143)
+        Me.txtTotal.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.OrdersBindingSource2, "Total", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, Nothing, "C2"))
+        Me.txtTotal.Location = New System.Drawing.Point(89, 36)
         Me.txtTotal.Name = "txtTotal"
-        Me.txtTotal.Size = New System.Drawing.Size(132, 20)
-        Me.txtTotal.TabIndex = 11
+        Me.txtTotal.Size = New System.Drawing.Size(100, 20)
+        Me.txtTotal.TabIndex = 6
         '
-        'Label1
+        'OrdersBindingSource2
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(14, 174)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(60, 13)
-        Me.Label1.TabIndex = 12
-        Me.Label1.Text = "Order date:"
+        Me.OrdersBindingSource2.DataMember = "Orders"
+        Me.OrdersBindingSource2.DataSource = Me.MainDataSet1
         '
-        'DtPicker
+        'txtDate
         '
-        Me.DtPicker.Location = New System.Drawing.Point(80, 169)
-        Me.DtPicker.Name = "DtPicker"
-        Me.DtPicker.Size = New System.Drawing.Size(200, 20)
-        Me.DtPicker.TabIndex = 13
+        Me.txtDate.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.OrdersBindingSource3, "Date", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, Nothing, "G"))
+        Me.txtDate.Location = New System.Drawing.Point(89, 62)
+        Me.txtDate.Multiline = True
+        Me.txtDate.Name = "txtDate"
+        Me.txtDate.Size = New System.Drawing.Size(100, 39)
+        Me.txtDate.TabIndex = 7
         '
-        'lblPrice
+        'OrdersBindingSource3
         '
-        Me.lblPrice.AutoSize = True
-        Me.lblPrice.Location = New System.Drawing.Point(14, 120)
-        Me.lblPrice.Name = "lblPrice"
-        Me.lblPrice.Size = New System.Drawing.Size(34, 13)
-        Me.lblPrice.TabIndex = 14
-        Me.lblPrice.Text = "Price:"
+        Me.OrdersBindingSource3.DataMember = "Orders"
+        Me.OrdersBindingSource3.DataSource = Me.MainDataSet1
         '
-        'txtPrice
+        'OrdersTableAdapter
         '
-        Me.txtPrice.AcceptsReturn = True
-        Me.txtPrice.Location = New System.Drawing.Point(147, 117)
-        Me.txtPrice.Name = "txtPrice"
-        Me.txtPrice.Size = New System.Drawing.Size(132, 20)
-        Me.txtPrice.TabIndex = 15
+        Me.OrdersTableAdapter.ClearBeforeFill = True
         '
-        'btnClr
+        'DataGridView1
         '
-        Me.btnClr.Location = New System.Drawing.Point(13, 258)
-        Me.btnClr.Name = "btnClr"
-        Me.btnClr.Size = New System.Drawing.Size(267, 23)
-        Me.btnClr.TabIndex = 16
-        Me.btnClr.Text = "Clear"
-        Me.btnClr.UseVisualStyleBackColor = True
+        Me.DataGridView1.AllowUserToAddRows = False
+        Me.DataGridView1.AllowUserToDeleteRows = False
+        Me.DataGridView1.AutoGenerateColumns = False
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.OrderIDDataGridViewTextBoxColumn, Me.ProductIDDataGridViewTextBoxColumn, Me.QuantityDataGridViewTextBoxColumn, Me.PriceDataGridViewTextBoxColumn})
+        Me.DataGridView1.DataSource = Me.OrderProdBindingSource
+        Me.DataGridView1.Location = New System.Drawing.Point(195, 10)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.ReadOnly = True
+        Me.DataGridView1.Size = New System.Drawing.Size(655, 357)
+        Me.DataGridView1.TabIndex = 8
+        '
+        'OrderProdBindingSource
+        '
+        Me.OrderProdBindingSource.DataMember = "OrderProd"
+        Me.OrderProdBindingSource.DataSource = Me.MainDataSet2
+        '
+        'MainDataSet2
+        '
+        Me.MainDataSet2.DataSetName = "MainDataSet2"
+        Me.MainDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'OrderProdTableAdapter
+        '
+        Me.OrderProdTableAdapter.ClearBeforeFill = True
+        '
+        'btnSave
+        '
+        Me.btnSave.Location = New System.Drawing.Point(16, 235)
+        Me.btnSave.Name = "btnSave"
+        Me.btnSave.Size = New System.Drawing.Size(173, 40)
+        Me.btnSave.TabIndex = 9
+        Me.btnSave.Text = "Save"
+        Me.btnSave.UseVisualStyleBackColor = True
+        '
+        'btnCancel
+        '
+        Me.btnCancel.Location = New System.Drawing.Point(16, 281)
+        Me.btnCancel.Name = "btnCancel"
+        Me.btnCancel.Size = New System.Drawing.Size(173, 40)
+        Me.btnCancel.TabIndex = 10
+        Me.btnCancel.Text = "Cancel"
+        Me.btnCancel.UseVisualStyleBackColor = True
+        '
+        'btnProd
+        '
+        Me.btnProd.Location = New System.Drawing.Point(16, 327)
+        Me.btnProd.Name = "btnProd"
+        Me.btnProd.Size = New System.Drawing.Size(173, 40)
+        Me.btnProd.TabIndex = 11
+        Me.btnProd.Text = "Product List"
+        Me.btnProd.UseVisualStyleBackColor = True
+        '
+        'btnViewCust
+        '
+        Me.btnViewCust.Location = New System.Drawing.Point(16, 189)
+        Me.btnViewCust.Name = "btnViewCust"
+        Me.btnViewCust.Size = New System.Drawing.Size(173, 40)
+        Me.btnViewCust.TabIndex = 12
+        Me.btnViewCust.Text = "View Customer Details"
+        Me.btnViewCust.UseVisualStyleBackColor = True
+        '
+        'OrderIDDataGridViewTextBoxColumn
+        '
+        Me.OrderIDDataGridViewTextBoxColumn.DataPropertyName = "OrderID"
+        Me.OrderIDDataGridViewTextBoxColumn.HeaderText = "OrderID"
+        Me.OrderIDDataGridViewTextBoxColumn.Name = "OrderIDDataGridViewTextBoxColumn"
+        Me.OrderIDDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'ProductIDDataGridViewTextBoxColumn
+        '
+        Me.ProductIDDataGridViewTextBoxColumn.DataPropertyName = "ProductID"
+        Me.ProductIDDataGridViewTextBoxColumn.HeaderText = "ProductID"
+        Me.ProductIDDataGridViewTextBoxColumn.Name = "ProductIDDataGridViewTextBoxColumn"
+        Me.ProductIDDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'QuantityDataGridViewTextBoxColumn
+        '
+        Me.QuantityDataGridViewTextBoxColumn.DataPropertyName = "Quantity"
+        Me.QuantityDataGridViewTextBoxColumn.HeaderText = "Quantity"
+        Me.QuantityDataGridViewTextBoxColumn.Name = "QuantityDataGridViewTextBoxColumn"
+        Me.QuantityDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'PriceDataGridViewTextBoxColumn
+        '
+        Me.PriceDataGridViewTextBoxColumn.DataPropertyName = "Price"
+        Me.PriceDataGridViewTextBoxColumn.HeaderText = "Price"
+        Me.PriceDataGridViewTextBoxColumn.Name = "PriceDataGridViewTextBoxColumn"
+        Me.PriceDataGridViewTextBoxColumn.ReadOnly = True
         '
         'frmAddOrder
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(292, 293)
-        Me.Controls.Add(Me.btnClr)
-        Me.Controls.Add(Me.txtPrice)
-        Me.Controls.Add(Me.lblPrice)
-        Me.Controls.Add(Me.DtPicker)
-        Me.Controls.Add(Me.Label1)
+        Me.ClientSize = New System.Drawing.Size(862, 380)
+        Me.Controls.Add(Me.btnViewCust)
+        Me.Controls.Add(Me.btnProd)
+        Me.Controls.Add(Me.btnCancel)
+        Me.Controls.Add(Me.btnSave)
+        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.txtDate)
         Me.Controls.Add(Me.txtTotal)
+        Me.Controls.Add(Me.txtCustID)
+        Me.Controls.Add(Me.txtID)
+        Me.Controls.Add(Me.lblDate)
         Me.Controls.Add(Me.lblTotal)
-        Me.Controls.Add(Me.txtQty)
-        Me.Controls.Add(Me.lblQty)
-        Me.Controls.Add(Me.lblProductID)
-        Me.Controls.Add(Me.txtProdID)
         Me.Controls.Add(Me.lblCustID)
-        Me.Controls.Add(Me.txtCustomerID)
-        Me.Controls.Add(Me.txtOrderID)
         Me.Controls.Add(Me.lblOrderID)
-        Me.Controls.Add(Me.btnBack)
-        Me.Controls.Add(Me.btnAdd)
         Me.Name = "frmAddOrder"
         Me.Text = "AddOrder"
+        CType(Me.OrdersBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MainDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.OrdersBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.OrdersBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.OrdersBindingSource3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.OrderProdBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MainDataSet2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents btnAdd As System.Windows.Forms.Button
-    Friend WithEvents btnBack As System.Windows.Forms.Button
     Friend WithEvents lblOrderID As System.Windows.Forms.Label
-    Friend WithEvents txtOrderID As System.Windows.Forms.TextBox
-    Friend WithEvents txtCustomerID As System.Windows.Forms.TextBox
     Friend WithEvents lblCustID As System.Windows.Forms.Label
-    Friend WithEvents txtProdID As System.Windows.Forms.TextBox
-    Friend WithEvents lblProductID As System.Windows.Forms.Label
-    Friend WithEvents lblQty As System.Windows.Forms.Label
-    Friend WithEvents txtQty As System.Windows.Forms.TextBox
     Friend WithEvents lblTotal As System.Windows.Forms.Label
+    Friend WithEvents lblDate As System.Windows.Forms.Label
+    Friend WithEvents txtID As System.Windows.Forms.TextBox
+    Friend WithEvents txtCustID As System.Windows.Forms.TextBox
     Friend WithEvents txtTotal As System.Windows.Forms.TextBox
-    Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents DtPicker As System.Windows.Forms.DateTimePicker
-    Friend WithEvents lblPrice As System.Windows.Forms.Label
-    Friend WithEvents txtPrice As System.Windows.Forms.TextBox
-    Friend WithEvents btnClr As System.Windows.Forms.Button
+    Friend WithEvents txtDate As System.Windows.Forms.TextBox
+    Friend WithEvents MainDataSet1 As OrderProg.MainDataSet1
+    Friend WithEvents OrdersBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents OrdersTableAdapter As OrderProg.MainDataSet1TableAdapters.OrdersTableAdapter
+    Friend WithEvents OrdersBindingSource1 As System.Windows.Forms.BindingSource
+    Friend WithEvents OrdersBindingSource2 As System.Windows.Forms.BindingSource
+    Friend WithEvents OrdersBindingSource3 As System.Windows.Forms.BindingSource
+    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents MainDataSet2 As OrderProg.MainDataSet2
+    Friend WithEvents OrderProdBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents OrderProdTableAdapter As OrderProg.MainDataSet2TableAdapters.OrderProdTableAdapter
+    Friend WithEvents btnSave As System.Windows.Forms.Button
+    Friend WithEvents btnCancel As System.Windows.Forms.Button
+    Friend WithEvents btnProd As System.Windows.Forms.Button
+    Friend WithEvents btnViewCust As System.Windows.Forms.Button
+    Friend WithEvents OrderIDDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents ProductIDDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents QuantityDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents PriceDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class

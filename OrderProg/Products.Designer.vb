@@ -22,63 +22,94 @@ Partial Class frmProducts
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.lstProducts = New System.Windows.Forms.ListBox()
+        Me.components = New System.ComponentModel.Container()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.IDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DescriptionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PriceDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ProductsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.MainDataSet = New OrderProg.MainDataSet()
+        Me.ProductsTableAdapter = New OrderProg.MainDataSetTableAdapters.ProductsTableAdapter()
+        Me.btnClose = New System.Windows.Forms.Button()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ProductsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MainDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'Button1
+        'DataGridView1
         '
-        Me.Button1.Location = New System.Drawing.Point(12, 86)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 48)
-        Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Show All Products"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.DataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.DataGridView1.AutoGenerateColumns = False
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IDDataGridViewTextBoxColumn, Me.DescriptionDataGridViewTextBoxColumn, Me.PriceDataGridViewTextBoxColumn})
+        Me.DataGridView1.DataSource = Me.ProductsBindingSource
+        Me.DataGridView1.Location = New System.Drawing.Point(4, 12)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(580, 274)
+        Me.DataGridView1.TabIndex = 3
         '
-        'Button2
+        'IDDataGridViewTextBoxColumn
         '
-        Me.Button2.Location = New System.Drawing.Point(12, 178)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 47)
-        Me.Button2.TabIndex = 1
-        Me.Button2.Text = "Search by product ID"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.IDDataGridViewTextBoxColumn.DataPropertyName = "ID"
+        Me.IDDataGridViewTextBoxColumn.HeaderText = "ID"
+        Me.IDDataGridViewTextBoxColumn.Name = "IDDataGridViewTextBoxColumn"
         '
-        'Button3
+        'DescriptionDataGridViewTextBoxColumn
         '
-        Me.Button3.Location = New System.Drawing.Point(12, 269)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 46)
-        Me.Button3.TabIndex = 2
-        Me.Button3.Text = "Return to Main form"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.DescriptionDataGridViewTextBoxColumn.DataPropertyName = "Description"
+        Me.DescriptionDataGridViewTextBoxColumn.HeaderText = "Description"
+        Me.DescriptionDataGridViewTextBoxColumn.Name = "DescriptionDataGridViewTextBoxColumn"
         '
-        'lstProducts
+        'PriceDataGridViewTextBoxColumn
         '
-        Me.lstProducts.FormattingEnabled = True
-        Me.lstProducts.Location = New System.Drawing.Point(131, 13)
-        Me.lstProducts.Name = "lstProducts"
-        Me.lstProducts.Size = New System.Drawing.Size(468, 290)
-        Me.lstProducts.TabIndex = 3
+        Me.PriceDataGridViewTextBoxColumn.DataPropertyName = "Price"
+        Me.PriceDataGridViewTextBoxColumn.HeaderText = "Price"
+        Me.PriceDataGridViewTextBoxColumn.Name = "PriceDataGridViewTextBoxColumn"
+        '
+        'ProductsBindingSource
+        '
+        Me.ProductsBindingSource.DataMember = "Products"
+        Me.ProductsBindingSource.DataSource = Me.MainDataSet
+        '
+        'MainDataSet
+        '
+        Me.MainDataSet.DataSetName = "MainDataSet"
+        Me.MainDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'ProductsTableAdapter
+        '
+        Me.ProductsTableAdapter.ClearBeforeFill = True
+        '
+        'btnClose
+        '
+        Me.btnClose.Location = New System.Drawing.Point(13, 300)
+        Me.btnClose.Name = "btnClose"
+        Me.btnClose.Size = New System.Drawing.Size(75, 23)
+        Me.btnClose.TabIndex = 4
+        Me.btnClose.Text = "Back"
+        Me.btnClose.UseVisualStyleBackColor = True
         '
         'frmProducts
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(609, 327)
-        Me.Controls.Add(Me.lstProducts)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.ClientSize = New System.Drawing.Size(596, 335)
+        Me.Controls.Add(Me.btnClose)
+        Me.Controls.Add(Me.DataGridView1)
         Me.Name = "frmProducts"
         Me.Text = "Products"
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ProductsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MainDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents Button2 As System.Windows.Forms.Button
-    Friend WithEvents Button3 As System.Windows.Forms.Button
-    Friend WithEvents lstProducts As System.Windows.Forms.ListBox
+    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents MainDataSet As OrderProg.MainDataSet
+    Friend WithEvents ProductsBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents ProductsTableAdapter As OrderProg.MainDataSetTableAdapters.ProductsTableAdapter
+    Friend WithEvents IDDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DescriptionDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents PriceDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents btnClose As System.Windows.Forms.Button
 End Class
